@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        
+        <video src="" id="video"></video>
+        <div class="cssmaid-lap">
+            <div class="neck">
+                <div class="lace up"></div>
+                <div class="ribbon"></div>
+                <div class="lace down"></div>
+            </div>
+            <div class="corset">
+                <div class="center">
+                    <div class="lace">
+                        <div class="side"></div>
+                    </div>
+                    <div class="under"></div>
+                    <div class="ribbon">
+                        ∞
+                    </div>
+                </div>
+                <div class="left">
+                    <div class="poncho">
+                        <div class="ribbon">∞</div>
+                        <div class="iris"></div>
+                    </div>
+                    <div class="lace"></div>
+                    <div class="line up"></div>
+                    <div class="line down"></div>
+                </div>
+                <div class="right">
+                    <div class="line up"></div>
+                    <div class="line down"></div>
+                    <div class="lace"></div>
+                    <div class="poncho">
+                        <div class="ribbon">∞</div>
+                        <div class="iris"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skirt">
+                <div class="belt">
+                    <div class="ribbon left">∞</div>
+                    <div class="ribbon center">☓☓</div>
+                    <div class="ribbon right">∞</div>
+                </div>
+                <div class="main">
+                    <div class="line"></div>
+                    <div class="lace"></div>
+                </div>
+                <div class="lace"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const video = document.getElementById("video")
+        navigator.mediaDevices.getUserMedia({
+            video: true,
+            audio: false,
+        }).then(stream => {
+            video.srcObject = stream;
+            video.play()
+        }).catch(e => {
+          console.log(e)
+        })
+  
+    </script>  
+</div>
+</body>
+</html>
